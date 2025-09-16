@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Soluções em Telecomunicações e Serviços de TI</title>
+    <title>Super Connect Telecom - Provedor de Internet</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #0d6efd;
@@ -20,74 +20,93 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        .navbar {
-            background-color: var(--primary-color) !important;
-        }
-        
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3') no-repeat center center;
-            background-size: cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3') no-repeat center center/cover;
             color: white;
             padding: 120px 0;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .bg-light-custom {
+            background-color: #f8f9fa;
+        }
+        
+        .icon-box {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
         }
         
         .service-card {
             transition: transform 0.3s;
             border: none;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .service-card:hover {
             transform: translateY(-10px);
         }
         
-        .icon-box {
-            width: 80px;
-            height: 80px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-        }
-        
-        .icon-box i {
-            font-size: 2rem;
-            color: white;
-        }
-        
-        .contact-info {
-            background-color: var(--light-color);
-            border-radius: 10px;
-            padding: 30px;
-        }
-        
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-        }
-        
         .btn-primary {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
         }
         
         .btn-primary:hover {
             background-color: #0b5ed7;
             border-color: #0a58ca;
         }
+        
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 1.5rem;
+            width: 30px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <i class="bi bi-wifi"></i> Smart Soluções
+                <i class="fas fa-wifi me-2"></i>Super Connect Telecom
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -97,6 +116,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planos">Planos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#sobre">Sobre</a>
@@ -112,149 +134,170 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero-section text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Conectando você ao mundo digital</h1>
-            <p class="lead">Internet de alta velocidade e soluções em TI para sua empresa e residência</p>
-            <a href="#contato" class="btn btn-primary btn-lg mt-3">Solicitar Orçamento</a>
+            <h1 class="display-4 fw-bold mb-4">Internet Rápida e Estável para Sua Casa ou Empresa</h1>
+            <p class="lead mb-5">Conecte-se com o mundo em alta velocidade com a melhor provedora de Olho d'Água das Flores</p>
+            <a href="#planos" class="btn btn-primary btn-lg me-3">Conheça Nossos Planos</a>
+            <a href="#contato" class="btn btn-outline-light btn-lg">Fale Conosco</a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="servicos" class="py-5">
+    <!-- Serviços -->
+    <section id="servicos" class="section-padding">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Nossos Serviços</h2>
-                <p class="lead text-muted">Oferecemos as melhores soluções em telecomunicações e TI</p>
+                <p class="lead">Oferecemos as melhores soluções em conectividade para você</p>
             </div>
-            
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card service-card h-100 text-center p-4">
                         <div class="icon-box">
-                            <i class="bi bi-wifi"></i>
+                            <i class="fas fa-home"></i>
                         </div>
-                        <h3>Internet Banda Larga</h3>
-                        <p>Conectividade de alta velocidade com estabilidade para sua empresa ou residência.</p>
+                        <h4>Internet Residencial</h4>
+                        <p>Planos de internet fibra óptica para sua casa com velocidade e estabilidade para toda família.</p>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
                     <div class="card service-card h-100 text-center p-4">
                         <div class="icon-box">
-                            <i class="bi bi-hdd-network"></i>
+                            <i class="fas fa-building"></i>
                         </div>
-                        <h3>Redes e Infraestrutura</h3>
-                        <p>Projetamos e implementamos infraestrutura de rede completa para seu negócio.</p>
+                        <h4>Internet Empresarial</h4>
+                        <p>Conectividade dedicada para empresas com garantia de uptime e suporte prioritário.</p>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
                     <div class="card service-card h-100 text-center p-4">
                         <div class="icon-box">
-                            <i class="bi bi-shield-check"></i>
+                            <i class="fas fa-tower-cell"></i>
                         </div>
-                        <h3>Segurança Digital</h3>
-                        <p>Proteção para seus dados e sistemas contra ameaças cibernéticas.</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card service-card h-100 text-center p-4">
-                        <div class="icon-box">
-                            <i class="bi bi-cloud"></i>
-                        </div>
-                        <h3>Serviços em Nuvem</h3>
-                        <p>Soluções de cloud computing para modernizar sua infraestrutura de TI.</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card service-card h-100 text-center p-4">
-                        <div class="icon-box">
-                            <i class="bi bi-headset"></i>
-                        </div>
-                        <h3>Suporte Técnico</h3>
-                        <p>Assistência técnica especializada presencial e remota para seu negócio.</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card service-card h-100 text-center p-4">
-                        <div class="icon-box">
-                            <i class="bi bi-telephone"></i>
-                        </div>
-                        <h3>Telefonia VoIP</h3>
-                        <p>Sistema de telefonia digital com melhor custo-benefício para empresas.</p>
+                        <h4>Link Dedicado</h4>
+                        <p>Conexões ponto a ponto com máxima confiabilidade para negócios que dependem de internet.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="sobre" class="py-5 bg-light">
+    <!-- Planos -->
+    <section id="planos" class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Nossos Planos</h2>
+                <p class="lead">Escolha o plano ideal para suas necessidades</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-header py-4 bg-primary text-white">
+                            <h3>Plano Básico</h3>
+                            <div class="price"><span class="fs-1">100</span> Mbps</div>
+                        </div>
+                        <div class="card-body py-5">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Download até 100 Mbps</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Upload até 50 Mbps</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Wi-Fi Grátis</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Instalação gratuita</li>
+                            </ul>
+                            <div class="fw-bold fs-3 mb-3">R$ 79,90/mês</div>
+                            <a href="#contato" class="btn btn-primary">Contratar Agora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-header py-4 bg-primary text-white">
+                            <h3>Plano Premium</h3>
+                            <div class="price"><span class="fs-1">300</span> Mbps</div>
+                        </div>
+                        <div class="card-body py-5">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Download até 300 Mbps</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Upload até 150 Mbps</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Wi-Fi Grátis</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Instalação gratuita</li>
+                            </ul>
+                            <div class="fw-bold fs-3 mb-3">R$ 119,90/mês</div>
+                            <a href="#contato" class="btn btn-primary">Contratar Agora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-header py-4 bg-primary text-white">
+                            <h3>Plano Ultra</h3>
+                            <div class="price"><span class="fs-1">600</span> Mbps</div>
+                        </div>
+                        <div class="card-body py-5">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Download até 600 Mbps</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Upload até 300 Mbps</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Wi-Fi Grátis</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Instalação gratuita</li>
+                            </ul>
+                            <div class="fw-bold fs-3 mb-3">R$ 169,90/mês</div>
+                            <a href="#contato" class="btn btn-primary">Contratar Agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section-padding">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h2 class="fw-bold mb-4">Sobre a Smart Soluções</h2>
-                    <p>A Smart Soluções em Telecomunicações e Serviços de TI é uma empresa comprometida em oferecer as melhores soluções em conectividade e tecnologia para nossos clientes.</p>
-                    <p>Com profissionais qualificados e experiência no mercado, garantimos serviços de alta qualidade que impulsionam o crescimento do seu negócio.</p>
-                    <ul class="list-unstyled">
-                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Internet de alta velocidade</li>
-                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Suporte técnico especializado</li>
-                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Soluções personalizadas</li>
-                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Atendimento rápido e eficiente</li>
-                    </ul>
+                    <h2 class="fw-bold mb-4">Sobre a Super Connect Telecom</h2>
+                    <p class="lead">Há mais de 10 anos conectando pessoas e negócios em Olho d'Água das Flores e região.</p>
+                    <p>Nossa missão é proporcionar a melhor experiência em conectividade com tecnologia de ponta, atendimento personalizado e preços justos. Utilizamos fibra óptica de última geração para garantir velocidade e estabilidade em sua conexão.</p>
+                    <p>Valorizamos o relacionamento com nossos clientes e buscamos sempre superar expectativas, com suporte técnico ágil e eficiente.</p>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1569144157581-984dea473e2b?ixlib=rb-4.0.3" alt="Equipe de TI" class="img-fluid rounded">
+                    <img src="https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3" alt="Equipe Super Connect Telecom" class="img-fluid rounded">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contato" class="py-5">
+    <!-- Contato -->
+    <section id="contato" class="section-padding bg-light-custom">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Entre em Contato</h2>
-                <p class="lead text-muted">Estamos à disposição para atender suas necessidades</p>
+                <p class="lead">Estamos à disposição para tirar suas dúvidas</p>
             </div>
-            
             <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="contact-info h-100">
-                        <h3 class="mb-4">Informações de Contato</h3>
-                        <p><i class="bi bi-geo-alt-fill text-primary me-2"></i> <strong>Endereço:</strong> Rua Tampico 2079 Galpão, Parque Guadalajara (Jurema), Caucaia - CE, 61650-210</p>
-                        <p><i class="bi bi-telephone-fill text-primary me-2"></i> <strong>Telefone:</strong> (85) 98686-2429</p>
-                        <p><i class="bi bi-envelope-fill text-primary me-2"></i> <strong>Email:</strong> contato@smartsolucoes.com.br</p>
-                        <p><i class="bi bi-building text-primary me-2"></i> <strong>CNPJ:</strong> 18.563.238/0001-90</p>
-                        
-                        <div class="mt-4">
-                            <h4>Horário de Atendimento</h4>
-                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
-                        </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 p-4">
+                        <h4 class="mb-4">Informações de Contato</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> Rua São Francisco, 312 - Centro, Olho d'Água das Flores - AL, 57442-000</li>
+                            <li><i class="fas fa-phone"></i> (82) 99999-9999</li>
+                            <li><i class="fas fa-envelope"></i> contato@superconnecttelecom.com.br</li>
+                            <li><i class="fas fa-clock"></i> Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h</li>
+                            <li><i class="fas fa-file-alt"></i> CNPJ: 15.392.907/0001-10</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="card p-4">
-                        <h3 class="mb-4">Envie uma Mensagem</h3>
+                        <h4 class="mb-4">Envie uma Mensagem</h4>
                         <form>
                             <div class="mb-3">
-                                <label for="name" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="name" required>
+                                <input type="text" class="form-control" placeholder="Seu nome" required>
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required>
+                                <input type="email" class="form-control" placeholder="Seu e-mail" required>
                             </div>
                             <div class="mb-3">
-                                <label for="phone" class="form-label">Telefone</label>
-                                <input type="tel" class="form-control" id="phone">
+                                <input type="tel" class="form-control" placeholder="Seu telefone">
                             </div>
                             <div class="mb-3">
-                                <label for="message" class="form-label">Mensagem</label>
-                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                                <textarea class="form-control" rows="4" placeholder="Sua mensagem" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
                         </form>
@@ -265,18 +308,15 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-4">
+    <footer class="text-center">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2023 Smart Soluções em Telecomunicações e Serviços de TI LTDA. Todos os direitos reservados.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
-                </div>
+            <div class="social-icons mb-4">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
             </div>
+            <p class="mb-2">Super Connect Telecom LTDA © 2023 - Todos os direitos reservados</p>
+            <p>Provedor de Internet em Olho d'Água das Flores - AL</p>
         </div>
     </footer>
 
